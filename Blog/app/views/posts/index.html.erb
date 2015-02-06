@@ -1,12 +1,19 @@
-<h1>Welcome/Bienvenue </h1>
+<h1>Welcome/Bienvenue// </h1>
+
+
 
 <% @posts.each do |post| %>
 <h2><%= link_to post.title, post %><h2/>
 
-  <p>by <%= post.autor%></p>
+  <p>by <font color="green"><%= post.autor%></font></p>
   <p><%= time_ago_in_words post.created_at %> ago</p>
-  <p><%= truncate post.text %></p>
+
+
+  <p><font color="purple"><%= truncate post.text %></font></p>
+  
+  
 <% end %>
+<p><font color="red">test</font></p>
 
 <p>
 <%= link_to "New Post/ Nouveau Post", new_post_path  %>
