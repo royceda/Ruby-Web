@@ -1,4 +1,4 @@
-<h1>Welcome/Bienvenue </h1>
+<center><h1>Welcome/Bienvenue </h1>
 
 
 
@@ -12,13 +12,13 @@
 
 
   
-  <p><font color="purple"><%= truncate post.text %></font></p>
+  <p><font color="purple" size=5><%= truncate post.text %></font></p>
   
-  <p><font color="red">t<%= post.created_at %> </font></p>  
+  <p><font color="red" size=1>t<%= post.created_at %> </font></p>  
 <% end %>
 
-
-
-<p>
+<p><font color="blue">
 <%= link_to "New Post/ Nouveau Post", new_post_path  %>
-</p>
+</font></p>
+</center>
+
