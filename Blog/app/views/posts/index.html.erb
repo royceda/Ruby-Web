@@ -6,10 +6,12 @@
 <p>-----------------------------</p>
 <h2><%= link_to post.title, post %><h2/>
 
-  <p>by <font color="green"><%= post.autor%></font></p>
-  <p><%= time_ago_in_words post.created_at %> ago</p>
+  <p>by <font color="green"><%= post.autor%></font>
+  |
+  <%= time_ago_in_words post.created_at %> ago</p>
 
 
+  
   <p><font color="purple"><%= truncate post.text %></font></p>
   
   <p><font color="red">t<%= post.created_at %> </font></p>  
