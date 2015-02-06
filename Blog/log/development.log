@@ -577,3 +577,24 @@ Processing by PostsController#index as HTML
   [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
   Rendered posts/index.html.erb within layouts/application (12.5ms)
 Completed 200 OK in 108ms (Views: 106.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-07 00:47:26 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-07 00:48:26 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 109ms (Views: 107.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-07 00:49:15 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 79ms (Views: 78.2ms | ActiveRecord: 0.3ms)
