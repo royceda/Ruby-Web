@@ -403,3 +403,109 @@ Processing by PostsController#show as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered posts/show.html.erb within layouts/application (1.4ms)
 Completed 200 OK in 136ms (Views: 134.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2015-02-06 22:14:35 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 613ms (Views: 567.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2015-02-06 22:15:23 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (11.0ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 238ms (Views: 225.6ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2015-02-06 22:16:22 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (103.0ms)
+Completed 500 Internal Server Error in 111ms
+
+ActionView::Template::Error (undefined local variable or method `time_in_words' for #<#<Class:0xb99138f4>:0xb9925734>):
+    16: <% end %>
+    17: 
+    18: 
+    19: <p><font color="red">t<%= time_in_words %> </font></p>
+    20: <p>
+    21: <%= link_to "New Post/ Nouveau Post", new_post_path  %>
+    22: </p>
+  app/views/posts/index.html.erb:19:in `_app_views_posts_index_html_erb__751159414__590809338'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (24.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (14.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (5.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (5.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (113.1ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2015-02-06 22:16:41 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (101.9ms)
+Completed 500 Internal Server Error in 117ms
+
+ActionView::Template::Error (undefined local variable or method `time' for #<#<Class:0xb99138f4>:0xb47e3dd0>):
+    16: <% end %>
+    17: 
+    18: 
+    19: <p><font color="red">t<%= time %> </font></p>
+    20: <p>
+    21: <%= link_to "New Post/ Nouveau Post", new_post_path  %>
+    22: </p>
+  app/views/posts/index.html.erb:19:in `_app_views_posts_index_html_erb__751159414__633399458'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (57.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (16.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (4.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (3.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (160.5ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2015-02-06 22:17:13 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 172ms (Views: 170.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2015-02-06 23:03:19 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 185ms (Views: 170.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application-b1e6e5be126c03ffc2bc761c1c3d53e8.css?body=1" for 127.0.0.1 at 2015-02-06 23:03:20 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-06 23:03:24 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.0ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2015-02-06 23:03:27 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 82ms (Views: 80.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-06 23:03:30 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.2ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-06 23:03:30 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms)

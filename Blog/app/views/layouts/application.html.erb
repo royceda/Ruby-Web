@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Royce</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Royce's mini Blog</title>
+    <link rel="stylesheet" href="http://railsgirls.com/assets/boostrap.css">
 
-<%= yield %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-</body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">The Idea app</a>
+          <ul class="nav">
+            <li class="active"><a href="/ideas">Ideas</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer>
+      <div class="container">
+        Rails Girls 2012
+      </div>
+    </footer>
+
+
+  </body>
 </html>
