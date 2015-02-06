@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 #  get 'comments/create'
 #  get 'comments/destroy'
-
-#  resources :posts do
+  resources :posts 
 #    ressources :comments
-#  end
+# end
 end
 
   # The priority is based upon order of creation: first created -> highest priority.

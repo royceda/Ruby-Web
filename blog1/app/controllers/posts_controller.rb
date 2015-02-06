@@ -5,12 +5,6 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
-
-    respond_to do |format|
-      format.html #index.html.erb
-      format.xml {render :xml => @posts }
-      format.atom 
-
   end
 
   # GET /posts/1
@@ -75,6 +69,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :text)
+      params.require(:post).permit(:title, :autor, :text)
     end
 end
