@@ -1693,3 +1693,43 @@ Processing by PostsController#index as HTML
   [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
   Rendered posts/index.html.erb within layouts/application (4.3ms)
 Completed 200 OK in 97ms (Views: 95.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-07 13:40:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 236ms (Views: 221.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2015-02-07 13:40:26 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (26.1ms)
+  Rendered posts/new.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 135ms (Views: 132.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2015-02-07 13:40:52 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hRorx/t2JlRjwPMFzosRTpyjC25D0txsT2Y8KGFCCh6Ym97e/vI4D/rlMxdCdkYpFWJA4UHvEmzl/fKD3gr1fw==", "post"=>{"title"=>"Work in BU", "autor"=>"Royce", "text"=>"11:00 to 18:00"}, "commit"=>"Create Post"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("title", "autor", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Work in BU"], ["autor", "Royce"], ["text", "11:00 to 18:00"], ["created_at", "2015-02-07 12:40:52.639023"], ["updated_at", "2015-02-07 12:40:52.639023"]]
+  [1m[36m (11.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 21ms (ActiveRecord: 12.7ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2015-02-07 13:40:52 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 113ms (Views: 106.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-07 13:40:54 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 112ms (Views: 110.4ms | ActiveRecord: 0.5ms)
