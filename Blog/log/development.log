@@ -3337,3 +3337,296 @@ Processing by PostsController#index as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
   Rendered posts/index.html.erb within layouts/application (2.5ms)
 Completed 200 OK in 85ms (Views: 84.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-07 14:57:20 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 235ms (Views: 212.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-07 14:57:31 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 108ms (Views: 106.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-07 14:57:42 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 80ms (Views: 78.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-07 14:58:01 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 115ms (Views: 113.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-07 14:59:21 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (4.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 161ms (Views: 155.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-07 15:00:08 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 126ms (Views: 124.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-02-07 15:06:22 +0100
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 111ms (Views: 100.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-07 15:06:23 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 119ms (Views: 92.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-02-07 15:06:26 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/_form.html.erb (19.3ms)
+  Rendered users/edit.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 138ms (Views: 136.6ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2015-02-07 15:06:31 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T+KDdXLXzAzKqbDHYltrnOmCO7C4OPg89UoidKFzAYNSY3Zsd1PSV1OMcNXupjz7YENwP7oFNjxf0ezfHjv+4g==", "user"=>{"name"=>"da", "picture"=>#<ActionDispatch::Http::UploadedFile:0xb580e9e4 @tempfile=#<Tempfile:/tmp/RackMultipart20150207-7595-1o3xuoo.png>, @original_filename="pfA.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[picture]\"; filename=\"pfA.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: picture
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `picture_changed?' for #<User:0xb5bbbab0>):
+  app/controllers/users_controller.rb:44:in `block in update'
+  app/controllers/users_controller.rb:43:in `update'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (18.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (53.7ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2015-02-07 15:08:01 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T+KDdXLXzAzKqbDHYltrnOmCO7C4OPg89UoidKFzAYNSY3Zsd1PSV1OMcNXupjz7YENwP7oFNjxf0ezfHjv+4g==", "user"=>{"name"=>"da", "picture"=>#<ActionDispatch::Http::UploadedFile:0xb4ff1cd4 @tempfile=#<Tempfile:/tmp/RackMultipart20150207-7595-1hp258r.png>, @original_filename="pfA.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[picture]\"; filename=\"pfA.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update User", "id"=>"1"}
+Completed 500 Internal Server Error in 12ms
+
+LoadError (cannot load such file -- RMagick (You may need to install the rmagick gem)):
+  app/uploaders/picture_uploader.rb:4:in `include'
+  app/uploaders/picture_uploader.rb:4:in `<class:PictureUploader>'
+  app/uploaders/picture_uploader.rb:3:in `<top (required)>'
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:67:in `set_user'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (32.6ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2015-02-07 15:09:36 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T+KDdXLXzAzKqbDHYltrnOmCO7C4OPg89UoidKFzAYNSY3Zsd1PSV1OMcNXupjz7YENwP7oFNjxf0ezfHjv+4g==", "user"=>{"name"=>"da", "picture"=>#<ActionDispatch::Http::UploadedFile:0xb55f51e4 @tempfile=#<Tempfile:/tmp/RackMultipart20150207-7595-sbr32d.png>, @original_filename="pfA.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[picture]\"; filename=\"pfA.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update User", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameter: picture
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 17ms
+
+NoMethodError (undefined method `picture_changed?' for #<User:0xb553b7bc>):
+  app/controllers/users_controller.rb:44:in `block in update'
+  app/controllers/users_controller.rb:43:in `update'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (6.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (42.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-02-07 15:13:55 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 136ms (Views: 134.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-02-07 15:13:57 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.4ms)
+  Rendered users/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 122ms (Views: 120.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-02-07 15:14:03 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WHmX7S0cGq+zgjOlx8lVO6c7PrZRIqLeo+FYlNm8mMBF+GL0KJgE9Cqn87dLNAJcLvp1OVMfbN4JepY/ZvRnoQ==", "user"=>{"name"=>"rfff", "picture"=>#<ActionDispatch::Http::UploadedFile:0xb511b2e0 @tempfile=#<Tempfile:/tmp/RackMultipart20150207-7595-1o0654y.png>, @original_filename="pfA.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[picture]\"; filename=\"pfA.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create User"}
+Unpermitted parameter: picture
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "rfff"], ["created_at", "2015-02-07 14:14:03.373302"], ["updated_at", "2015-02-07 14:14:03.373302"]]
+  [1m[35m (6.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 12ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2015-02-07 15:14:03 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 166ms (Views: 164.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-07 15:14:07 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 120ms (Views: 117.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-02-07 15:14:09 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 114ms (Views: 112.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2015-02-07 15:14:12 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 102ms (Views: 100.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2015-02-07 15:14:15 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/_form.html.erb (1.6ms)
+  Rendered users/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 94ms (Views: 93.4ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/users/3" for 127.0.0.1 at 2015-02-07 15:14:17 +0100
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0e5Bk5IeaTfWcfeqE/x66oTAReFrG8VoNhTZPvv1KiPMb7SKl5p3bE9UN7ifAS2NDQEObmkmC2icjxeVRL3VQg==", "user"=>{"name"=>"rfff"}, "commit"=>"Update User", "id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `picture_changed?' for #<User:0xb4f1d5ec>):
+  app/controllers/users_controller.rb:44:in `block in update'
+  app/controllers/users_controller.rb:43:in `update'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (9.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (42.1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2015-02-07 15:14:20 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 98ms (Views: 96.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2015-02-07 15:14:20 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 107ms (Views: 105.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2015-02-07 15:14:21 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 123ms (Views: 121.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2015-02-07 15:14:21 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 165ms (Views: 163.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-02-07 15:14:22 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 82ms (Views: 81.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-02-07 15:14:24 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (1.5ms)
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 89ms (Views: 88.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-02-07 15:14:36 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vqo6c/WjcqPnf3sNjbwZE4vlu8sQImHLWznWDC3MD9VLK89q8Cds+H5aux8BQU50AiTwRBIfr8vxohinkoTwtA==", "user"=>{"name"=>"yup", "picture"=>#<ActionDispatch::Http::UploadedFile:0xb8e7cddc @tempfile=#<Tempfile:/tmp/RackMultipart20150207-7595-fl4z7x.png>, @original_filename="pfA.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[picture]\"; filename=\"pfA.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create User"}
+Unpermitted parameter: picture
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "yup"], ["created_at", "2015-02-07 14:14:36.512983"], ["updated_at", "2015-02-07 14:14:36.512983"]]
+  [1m[35m (16.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 21ms (ActiveRecord: 16.6ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2015-02-07 15:14:36 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 136ms (Views: 134.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-02-07 15:14:42 +0100
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 84ms (Views: 83.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-07 15:14:49 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 87ms (Views: 85.9ms | ActiveRecord: 0.2ms)

@@ -1,20 +1,16 @@
 <center><h1>Welcome/Bienvenue </h1>
 
-
-
 <% @posts.each do |post| %>
-<p>-----------------------------</p>
+<Strong><p>-----------------------------------------------------------</p></Strong>
 <h2><%= link_to post.title, post %><h2/>
 
-  <p>by <font color="green"><%= post.autor%></font>
+  <p>by <font color="red"><%= post.autor%></font>
   |
   <%= time_ago_in_words post.created_at %> ago</p>
 
-
-  
   <p><font color="purple" size=5><%= truncate post.text %></font></p>
   
-  <p><font color="red" size=1>t<%= post.created_at %> </font></p>  
+  <p><font color="green" size=1>t<%= post.created_at %> </font></p>  
 <% end %>
 
 <p><font color="blue">
