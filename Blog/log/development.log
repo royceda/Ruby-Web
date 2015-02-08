@@ -5248,3 +5248,935 @@ Processing by PostsController#index as HTML
   [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
   Rendered posts/index.html.erb within layouts/application (3.7ms)
 Completed 200 OK in 90ms (Views: 89.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-02-08 23:31:28 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 176ms (Views: 148.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:31:30 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 29ms
+
+ActionView::Template::Error (undefined method `each' for #<User:0xb54463e8>):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @user.each do |post| %>
+    12: 
+    13:   <% end %>
+    14:   <%= link_to 'Show posts', posts_path() %>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___587933468__626907228'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (33.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:31:31 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `each' for #<User:0xba5226a4>):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @user.each do |post| %>
+    12: 
+    13:   <% end %>
+    14:   <%= link_to 'Show posts', posts_path() %>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___587933468__584527258'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (34.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:35:47 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @post.each do |post| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>
+    14: 
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___587933468__630185808'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (28.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:36:18 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (undefined method `posts' for #<User:0xb5c64c28>):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @user.posts.each do |post| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>
+    14:     
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___587933468__622650298'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (9.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (38.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:38:39 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 19ms
+
+SyntaxError (/home/da/Work/Ruby-Web/trunk/Blog/app/views/users/show.html.erb:11: syntax error, unexpected '.', expecting '|'
+'.freeze;   @user.posts.each do |post.autor == user.name| 
+                                      ^
+/home/da/Work/Ruby-Web/trunk/Blog/app/views/users/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/users/show.html.erb:11: syntax error, unexpected '.', expecting '|'
+  app/views/users/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (31.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:38:59 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 10ms
+
+SyntaxError (/home/da/Work/Ruby-Web/trunk/Blog/app/views/users/show.html.erb:11: syntax error, unexpected '.', expecting '|'
+'.freeze;   @user.posts.each do |post.autor == @user.name| 
+                                      ^
+/home/da/Work/Ruby-Web/trunk/Blog/app/views/users/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/users/show.html.erb:11: syntax error, unexpected '.', expecting '|'
+  app/views/users/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (33.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:39:44 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 57ms
+
+SyntaxError (/home/da/Work/Ruby-Web/trunk/Blog/app/views/users/show.html.erb:11: syntax error, unexpected '.', expecting '|'
+'.freeze;   @user.posts.each do |post.autor == @user.name| 
+                                      ^
+/home/da/Work/Ruby-Web/trunk/Blog/app/views/users/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/users/show.html.erb:11: syntax error, unexpected '.', expecting '|'
+  app/views/users/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (33.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:41:57 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/home/da/Work/Ruby-Web/trunk/Blog/app/views/users/show.html.erb:11: formal argument cannot be an instance variable
+'.freeze;   posts.each do |@user.post| 
+                                ^
+/home/da/Work/Ruby-Web/trunk/Blog/app/views/users/show.html.erb:11: syntax error, unexpected '.', expecting '|'
+'.freeze;   posts.each do |@user.post| 
+                                 ^
+/home/da/Work/Ruby-Web/trunk/Blog/app/views/users/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/users/show.html.erb:11: formal argument cannot be an instance variable
+  app/views/users/show.html.erb:11: syntax error, unexpected '.', expecting '|'
+  app/views/users/show.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (31.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:43:54 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @posts.each do |post| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>   
+    14:   </tr>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___694738591__628280558'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (36.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:44:32 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @users.each do |user| %>
+    12:   <tr>
+    13:     <td><%= user.post.title %></td>   
+    14:   </tr>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___694738591__623342288'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (33.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:45:51 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @posts.each do |post| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>   
+    14:   </tr>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___694738591__629274208'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (31.0ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2015-02-08 23:46:13 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 169ms (Views: 167.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:46:17 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @posts.each do |post| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>   
+    14:   </tr>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___694738591__629631718'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (29.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:46:18 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @posts.each do |post| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>   
+    14:   </tr>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___694738591__629274208'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (16.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (55.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:46:39 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (undefined method `each' for #<User:0xba4c9658>):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @user.each do |user| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>   
+    14:   </tr>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___694738591__584755728'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (11.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (43.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:46:49 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 30ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @users.each do |user| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>   
+    14:   </tr>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___694738591__629218058'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (37.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:48:11 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @users.each do |user| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>   
+    14:   </tr>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___694738591__624625828'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (32.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:48:27 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @posts.each do |post| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>   
+    14:   </tr>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___694738591__625893838'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (34.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:48:37 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [[nil, 1]]
+SQLite3::SQLException: no such column: posts.user_id: SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?
+  Rendered users/show.html.erb within layouts/application (33.8ms)
+Completed 500 Internal Server Error in 42ms
+
+ActionView::Template::Error (SQLite3::SQLException: no such column: posts.user_id: SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @user.posts.each do |post| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>   
+    14:   </tr>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___694738591__630675078'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (11.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (35.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:49:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [[nil, 1]]
+SQLite3::SQLException: no such column: posts.user_id: SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?
+  Rendered users/show.html.erb within layouts/application (24.7ms)
+Completed 500 Internal Server Error in 71ms
+
+ActionView::Template::Error (SQLite3::SQLException: no such column: posts.user_id: SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @user.posts.each do |post| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>   
+    14:   </tr>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___819654341__587149358'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (9.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (36.5ms)
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (3.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePosts (20150206202702)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "autor" varchar, "text" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150206202702"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Migrating to CreateComments (20150206202729)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "post_id" integer, "text" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150206202729"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Migrating to CreateUsers (20150207012406)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150207012406"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:50:01 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 28ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/users_controller.rb:67:in `set_user'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (32.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-02-08 23:50:13 +0100
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-08 23:50:13 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 169ms (Views: 163.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2015-02-08 23:50:15 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (25.9ms)
+  Rendered posts/new.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 167ms (Views: 152.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2015-02-08 23:50:30 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tawLn7s7cujnnCvHIWWxjPRwRMSjFTVL6d15df5IJeyoLf6Gvr9ss36569WtmObrfbEPS6Eo+0tDRrfeQQDajQ==", "post"=>{"title"=>"My First ", "autor"=>"Reda", "text"=>"Salut Hi"}, "commit"=>"Create Post"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "autor", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "My First "], ["autor", "Reda"], ["text", "Salut Hi"], ["created_at", "2015-02-08 22:50:30.883546"], ["updated_at", "2015-02-08 22:50:30.883546"]]
+  [1m[35m (3.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 10ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2015-02-08 23:50:30 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 75ms (Views: 72.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-02-08 23:50:33 +0100
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 82ms (Views: 80.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-02-08 23:50:35 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (5.8ms)
+  Rendered users/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 110ms (Views: 106.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-02-08 23:50:42 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vM349kYPJAB52weDWHGqgq+17lhdNeQM/8ILOn+/q56hTA3vQ4s6W+D+x5HUjP3lJnSl118IKgxVWcWRwPdU/w==", "user"=>{"name"=>"Reda", "picture"=>#<ActionDispatch::Http::UploadedFile:0xb4d050ac @tempfile=#<Tempfile:/tmp/RackMultipart20150208-4080-1bcal7q.png>, @original_filename="pfA.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[picture]\"; filename=\"pfA.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create User"}
+Unpermitted parameter: picture
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Reda"], ["created_at", "2015-02-08 22:50:42.933408"], ["updated_at", "2015-02-08 22:50:42.933408"]]
+  [1m[36m (10.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 16ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:50:42 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [[nil, 1]]
+SQLite3::SQLException: no such column: posts.user_id: SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?
+  Rendered users/show.html.erb within layouts/application (32.3ms)
+Completed 500 Internal Server Error in 36ms
+
+ActionView::Template::Error (SQLite3::SQLException: no such column: posts.user_id: SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @user.posts.each do |post| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>   
+    14:   </tr>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb__492437751__628192078'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (10.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (35.0ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2015-02-08 23:50:53 +0100
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (2.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 95ms (Views: 91.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:50:55 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?  [[nil, 1]]
+SQLite3::SQLException: no such column: posts.user_id: SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (SQLite3::SQLException: no such column: posts.user_id: SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @user.posts.each do |post| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>   
+    14:   </tr>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb__492437751__589825108'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (30.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:50:55 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (3.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?  [[nil, 1]]
+SQLite3::SQLException: no such column: posts.user_id: SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?
+  Rendered users/show.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (SQLite3::SQLException: no such column: posts.user_id: SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @user.posts.each do |post| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>   
+    14:   </tr>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb__492437751__628192078'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (17.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (46.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:52:46 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [[nil, 1]]
+SQLite3::SQLException: no such column: posts.user_id: SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?
+  Rendered users/show.html.erb within layouts/application (30.6ms)
+Completed 500 Internal Server Error in 88ms
+
+ActionView::Template::Error (SQLite3::SQLException: no such column: posts.user_id: SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @user.posts.each do |post| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>   
+    14:   </tr>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___852741260__592905628'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (31.7ms)
+  [1m[36m (5.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (2.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePosts (20150206202702)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "autor" varchar, "text" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150206202702"]]
+  [1m[35m (5.6ms)[0m  commit transaction
+Migrating to CreateComments (20150206202729)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "post_id" integer, "text" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150206202729"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Migrating to CreateUsers (20150207012406)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150207012406"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/users/" for 127.0.0.1 at 2015-02-08 23:55:32 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 182ms (Views: 158.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-02-08 23:55:34 +0100
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (25.1ms)
+  Rendered users/new.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 143ms (Views: 136.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-02-08 23:55:36 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E9jc1XNCh9NCj7mH+Lb6Ls/kqKl7AXLr2MnVyJNjBk0OWSnMdsaZiNuqeZV0S61JRiXjJnk8vOtyUhtjLCv5LA==", "user"=>{"name"=>"da"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "da"], ["created_at", "2015-02-08 22:55:36.654722"], ["updated_at", "2015-02-08 22:55:36.654722"]]
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 20ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-02-08 23:55:36 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [[nil, 1]]
+SQLite3::SQLException: no such column: posts.user_id: SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?
+  Rendered users/show.html.erb within layouts/application (35.2ms)
+Completed 500 Internal Server Error in 46ms
+
+ActionView::Template::Error (SQLite3::SQLException: no such column: posts.user_id: SELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?):
+     8:     <%= @user.picture %>
+     9:   </p>
+    10: 
+    11:   <% @user.posts.each do |post| %>
+    12:   <tr>
+    13:     <td><%= post.title %></td>   
+    14:   </tr>
+  app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb__927341488__628184268'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (8.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/template_error.html.erb within rescues/layout (49.3ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2015-02-08 23:55:49 +0100
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 99ms (Views: 97.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-08 23:55:55 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 88ms (Views: 86.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2015-02-08 23:55:57 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (7.8ms)
+  Rendered posts/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 89ms (Views: 83.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2015-02-08 23:56:08 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SEKdkehb230N3co0taKQWd9uI6fJK+1feq8Bm+13Ql5Vw2iI7d/FJpT4CiY5X8c+Vq9oKMsWI1/QNM8wUj+9Pw==", "post"=>{"title"=>"My First", "autor"=>"Reda", "text"=>"ouuuuu"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `content' for #<Post:0xb9f59b00>):
+  app/controllers/posts_controller.rb:36:in `block in create'
+  app/controllers/posts_controller.rb:35:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (37.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-08 23:56:25 +0100
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 96ms (Views: 94.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2015-02-08 23:56:27 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (2.3ms)
+  Rendered posts/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 118ms (Views: 117.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2015-02-08 23:56:33 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oR1vglqSKsyPLTP9ROHP/plUIID3FULDZHJN6JlQKTq8nJqbXxY0lxYI8+/IHJiZEJVrD/UojMPO6YNDJhjWWw==", "post"=>{"title"=>"aaaa", "autor"=>"ss", "text"=>"dd"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 11ms
+
+NoMethodError (undefined method `content' for #<Post:0xb5167898>):
+  app/controllers/posts_controller.rb:36:in `block in create'
+  app/controllers/posts_controller.rb:35:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (7.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (31.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-08 23:57:25 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 284ms (Views: 265.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2015-02-08 23:57:31 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (17.5ms)
+  Rendered posts/new.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 118ms (Views: 116.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2015-02-08 23:58:01 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vsqrss5CLwm5+6qh5lEdarn4xT99zr6QD5cI3oUU2xhLS16ry8YxUiDearNqrEoNMDmOsH/zcJClDMZ1OlwkeQ==", "post"=>{"title"=>"work by night", "autor"=>"Royce", "text"=>"by improving Mini Blog "}, "commit"=>"Create Post"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `content' for #<Post:0xb4e60be0>):
+  app/controllers/posts_controller.rb:36:in `block in create'
+  app/controllers/posts_controller.rb:35:in `create'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (6.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (31.8ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-08 23:58:59 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 224ms (Views: 208.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application-79e1233a68e5fdd328d8a2ea17ddef8a.js?body=1" for 127.0.0.1 at 2015-02-08 23:59:00 +0100
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2015-02-08 23:59:04 +0100
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (21.3ms)
+  Rendered posts/new.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 93ms (Views: 92.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2015-02-08 23:59:29 +0100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nLAogSR9UaNkW2DWNDmIGgVD0EZ2QTLQ1Y+tfuUumwOBMd2YIflP+P1+oMS4xN99jIKbyXR8/NB/FGPVWmZkYg==", "post"=>{"title"=>"work by night", "autor"=>"Reda", "text"=>"By improving the Mini Blog"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("title", "autor", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "work by night"], ["autor", "Reda"], ["text", "By improving the Mini Blog"], ["created_at", "2015-02-08 22:59:29.493710"], ["updated_at", "2015-02-08 22:59:29.493710"]]
+  [1m[36m (10.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/7
+Completed 302 Found in 18ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2015-02-08 23:59:29 +0100
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered posts/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 106ms (Views: 96.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2015-02-08 23:59:32 +0100
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 113ms (Views: 112.0ms | ActiveRecord: 0.2ms)
