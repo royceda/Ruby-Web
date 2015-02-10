@@ -10,7 +10,6 @@ class PostsController < ApplicationController
       format.html #index.html.erb
       format.xml { render :xml => @posts }
       format.atom
-    end
   end
 
   # GET /posts/1
@@ -77,5 +76,4 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :autor, :text)
     end
-  end
-
+end
