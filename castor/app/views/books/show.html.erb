@@ -1,0 +1,16 @@
+<h1>Result</h1>
+
+
+<%= @book.title %>
+
+<%= form_tag "/book/#{@book.id}", method: "patch" do %>
+  <input type="text" name="title" value="<%= @book.title %>" />
+  <input type="submit" value="Edit" />
+<% end %>
+
+
+<%= form_tag "/book/#{@book.id}", method: "delete" do %>
+  <input type="submit" value="Delete" />
+<% end %>
+
+<a href="/books">back</a>
