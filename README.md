@@ -1,2 +1,2 @@
 # Ruby-Web
-My first Ruby on Rails project
+To try and figure out Ruby on rails 
