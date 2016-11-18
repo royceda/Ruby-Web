@@ -1,0 +1,11 @@
+<h1><%= @post.name %></h1>
+
+
+<p><%= @post.content %><p>
+
+
+<p><%= time_ago_in_words(@post.created_at) %> ago</p>
+
+
+<!--  link_to(name, link)  -->
+<p> <%= link_to('Back', posts_path) %></p>

@@ -1,0 +1,31 @@
+<h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+
+<% if flash[:notice] %>
+<div class="alert alert-success">
+  <%= flash[:notice] %>
+</div>
+<% end %>
+
+<ul>
+  <% @posts.each do |post|  %>
+  <% if post.category %>
+  <li> <a href="/posts/<%=post.id%>"><%= post.name+ ', category:  '+ post.category.name %></a>  : <%=  post.content %></li>
+  <% else %>
+  <li> <a href="<%= post_path(post.id)%>"> <%= post.name %></a>  : <%=  post.content %></li>
+  <% end %>
+
+  <li> <a href="<%= url_for(controller:'posts', action:'show', id: post.id)%>"> <%= post.name %></a>  : <%=  post.content %></li>
+  <li>
+    <%= link_to post.name, post_path(post) %>
+    <%= link_to("Edit", [:edit, post]) %> <!-- call edit on post: [action, entity] -->
+    <%= link_to("Delete", post, method: :delete, data: {confirm: "Are You Sure ?"}) %> <!-- usefull by using Jquery UJS-->
+  </li>
+  <% end %>
+</ul>
+
+
+<%= link_to "New", new_post_path %>
+
+
+<p><%= posts_path %> </p>

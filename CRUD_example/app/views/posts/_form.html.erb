@@ -1,0 +1,6 @@
+<%= simple_form_for post do |f| %>
+  <%= f.input :name %>
+  <%= f.input :content %>
+  <%= f.input :category_id, collection: @categories %>
+  <%= f.button :submit, post.new_record? ? 'Create' : 'Edit' %> <!-- If its a creation 'Create' is written-->
+<% end %>
